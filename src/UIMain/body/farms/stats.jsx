@@ -13,8 +13,10 @@ function Stats({ web3, address }) {
     var depositedUser = 0;
 
     if (window.ts) {
-      pendingUser = window.ts.pending;
-      depositedUser = window.ts.deposited;
+      if (window.ts.deposited !== 0 && window.ts.pending !== 0) {
+        pendingUser = window.ts.pending;
+        depositedUser = window.ts.deposited;
+      }
     }
     setData({
       pending: pendingUser,

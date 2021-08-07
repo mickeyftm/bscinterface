@@ -56,7 +56,6 @@ export default function Pool({
   });
 
   const loadPool = async () => {
-    window.ts = { value: 0, pending: 0, deposited: 0, added: [] };
     web3ext = getWeb3NoAccount();
     let token = new web3ext.eth.Contract(tokenAbi, token_address);
     let pool = new web3ext.eth.Contract(poolAbi, farmAddress);
@@ -242,6 +241,7 @@ export default function Pool({
   }
 
   useEffect(() => {
+    window.ts = { value: 0, pending: 0, deposited: 0, added: [] };
     //loadall();
     loadPool();
     const interval = setInterval(() => {
@@ -337,12 +337,14 @@ export default function Pool({
           </div>
           <div className="key">TVL</div>
         </div>
-        <div
-          className="btn outlined ml-auto get"
-          href={buy_url}
-          target="_blank"
-        >
-          Get {name}
+        <div>
+          <a
+            className="btn outlined ml-auto get"
+            href={buy_url}
+            target="_blank"
+          >
+            Get {name}
+          </a>
         </div>
         <div
           onClick={() => {
