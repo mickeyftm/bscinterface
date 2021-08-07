@@ -95,8 +95,8 @@ function Stats({ web3, address }) {
       <div class="network-options-bar">
         <div
           class="network-selector index-0"
-          data-index-0-url="/" //bsc
-          data-index-1-url="/" //polygon
+          data-index-0-url="https://retrofarms.net/" //bsc
+          data-index-1-url="https://polygon.retrofarms.net/" //polygon
           onClick={() => changenetwork()}
         ></div>
       </div>
