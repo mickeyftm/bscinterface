@@ -7,9 +7,9 @@ export const createweb3Modal = new Web3Modal({
   providerOptions, // required
   disableInjectedProvider: false,
   theme: {
-    background: "#380033a8",
-    main: "#fff",
-    secondary: "#00c0d4",
+    background: "var(--c-background)",
+    main: "var(--c-primary)",
+    secondary: "var(--c-secondary)",
     border: "#380033a8",
     hover: "#ff0a9c78"
   }
